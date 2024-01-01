@@ -1,0 +1,23 @@
+{% extends "main/base.html" %}
+{%block content%}
+{% load widget_tweaks %}
+<div class="container_form">
+   
+    <h2>Создания Поста</h2>
+    <form method="post" enctype="multipart/form-data">
+        <label for="title">Заголовок:</label>
+        
+        {%render_field form.title id="name"%}
+
+        {%csrf_token%}
+
+        <label for="discription">Основной текст:</label>
+        {%render_field form.text id="text"%}<br>
+
+        <label for="image">Изображение:</label>
+        {%render_field form.image id="name"%} <br>
+
+        <input type="submit" value="СОЗДАТЬ">
+    </form>
+</div>
+{% endblock %}

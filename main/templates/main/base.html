@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static "css/home.css" %}">
+	{% block connect %}
+	{% endblock  %}
+	<title>{% block title %}{% endblock  %}</title>
+</head>
+<body>
+<div class="wrapper">
+	<header class="header">
+		<div class="header__conteiner">
+			<div class="logo_name">
+				<div class="name">
+					<a href="{% url "home" %}"><h1><span class="logo">S</span> ocNet</h1></a>
+				</div>
+			</div>
+			<div class="nav_links">
+			<ul>
+				{%if user.is_authenticated%}
+				<li><a href="{% url "logout" %}">ВЫХОД</a></li>
+				<li><a href="{% url "create_post" %}">СОЗДАТЬ ПОСТ</a></li>
+				<li class="caps">{{user}}</li>
+				{%else%}
+				<li><a href="{% url "login" %}">ВХОД</a></li>
+				<li><a href="{% url "login" %}">СОЗДАТЬ ПОСТ</a></li>
+				{%endif%}
+			</ul>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="main__container">
+            {% block content %}
+            {% endblock  %}
+		</div>
+	</main>
+</div>	
+</body>
+</html>

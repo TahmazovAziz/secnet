@@ -1,0 +1,44 @@
+{% extends "main/base.html" %}
+{% block title %}Main Page{% endblock  %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/home.css" %}">
+<div class="blocks_row">
+ {% for item in post_data %}
+    <div class="block">
+        <div class="image">
+            
+            <a href='media/{{item.image}}'>
+            <img src="media/{{item.image}}" width='500px' alt="">
+            <a>
+                
+        </div>
+        <div class="descriptions">
+            <div class="title">
+                <h3>{{item.title}}</h3>
+            </div>
+            <hr>
+            <div class="subtitle">
+                <p>{{item.text}}</p>
+            </div>
+        </div>
+        <hr>
+        <div class="form">
+            <p>from:{{item.userid}}</p>
+        </div>
+        <div class="communication">
+            <div class="phone_and_mess">
+                <div class="mess">
+                    <a href="{% url 'chatbox' chat_box_name=user %}">
+                        <img src="{% static "image/messenger.png" %}" width="30px" height="30px" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+
+    {% endfor %}
+</div>
+</div>
+{% endblock  %}

@@ -1,0 +1,13 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Log out ?{% endblock  %}
+{%block content%}
+<h1 style='text-align:center;'>Вы действительно хотите выйти?</h1>
+<div  class="logout_buttons">
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+        <button class="logout_button" type="submit"><p class="caps">ВЫХОД</p></button>
+    </form>
+    <a href="{% url "home" %}"><button class="home_button"><p class="caps">Нет обратно</p></button></a>
+</div>
+{%endblock%}
