@@ -3,3 +3,4 @@
 2 widget_tweaks -- pip install django-widget-tweaks
 3 channels 3.0.5 -- pip install channels==3.0.5
 4 django-allauth -- pip install django-allauth
+Ну и конечтно сам django -- pip install django
