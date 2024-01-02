@@ -12,6 +12,7 @@
   {%endif%}
   <form method="post">
     {{form}}
+    {% csrf_token %}
     <input type="submit" value="Войти">
     {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
   </form>
