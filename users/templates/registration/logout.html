@@ -2,6 +2,8 @@
 {% load static %}
 {% block title %}Log out ?{% endblock  %}
 {%block content%}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/users.css" %}">
 <h1 style='text-align:center;'>Вы действительно хотите выйти?</h1>
 <div  class="logout_buttons">
 <form method="post" action="{% url 'logout' %}">

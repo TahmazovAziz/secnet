@@ -68,46 +68,7 @@ li{
 }
 
 
-.logout_buttons{
-	display: flex;
-	justify-content: space-around;
-	margin-top: 10px;
-}
-.logout_button{
-	display: block;
-	width: 179px;
-	height: 90px;
-	border:none;
-	border-radius: 10px;
-	background: #602319;
-	transition: 1s;
-	text-decoration: none;
-}
 
-.logout_button:hover{
-	background: #bb1d1d;
-	transition: 1s;
-	cursor: pointer;
-}
-
-.home_button{
-	display: block;
-	width: 179px;
-	height: 90px;
-	margin: 0 auto;
-	border:none;
-	border-radius: 10px;
-	background: #602319;
-	transition: 1s;
-}
-.container {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 
 h2 {
     text-align: center;
@@ -132,7 +93,6 @@ input[type="title"] {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-input[type="text"],
 textarea {
 	width: 100%;
 	padding: 10px;
