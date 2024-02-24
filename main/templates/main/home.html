@@ -2,7 +2,6 @@
 {% block title %}Main Page{% endblock  %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" href="{% static "css/home.css" %}">
 <div class="blocks_row">
  {% for item in post_data %}
     <div class="block">
@@ -23,13 +22,13 @@
             </div>
         </div>
         <hr>
-        <div class="form">
+        <div class="from">
             <p>from:{{item.userid}}</p>
         </div>
         <div class="communication">
             <div class="phone_and_mess">
                 <div class="mess">
-                    <a href="{% url 'chatbox' chat_box_name=user %}">
+                    <a href="{% url 'chatbox' chat_box_name=item.id %}">
                         <img src="{% static "image/messenger.png" %}" width="30px" height="30px" alt="">
                     </a>
                 </div>

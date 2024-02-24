@@ -12,6 +12,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('post/', include('post.urls')),
     path('chat/<str:chat_box_name>' ,chatbox, name='chatbox'),
+    path('profile/',include('user_profile.urls'),name='profile')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

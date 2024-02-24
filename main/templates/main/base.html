@@ -15,7 +15,7 @@
 		<div class="header__conteiner">
 			<div class="logo_name">
 				<div class="name">
-					<a href="{% url "home" %}"><h1><span class="logo">S</span> ocNet</h1></a>
+					<a href="{% url "home" %}"><h1>SocNet</h1></a>
 				</div>
 			</div>
 			<div class="nav_links">
@@ -23,10 +23,11 @@
 				{%if user.is_authenticated%}
 				<li><a href="{% url "logout" %}">ВЫХОД</a></li>
 				<li><a href="{% url "create_post" %}">СОЗДАТЬ ПОСТ</a></li>
-				<li class="caps">{{user}}</li>
+				<li class="caps"><a href="{%url 'profile'%}">{{user}}</a></li>
 				{%else%}
 				<li><a href="{% url "login" %}">ВХОД</a></li>
 				<li><a href="{% url "login" %}">СОЗДАТЬ ПОСТ</a></li>
+				<li><a href="#">{{user}}</a></li>
 				{%endif%}
 			</ul>
 			</div>

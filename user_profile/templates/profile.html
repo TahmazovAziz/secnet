@@ -1,0 +1,72 @@
+{% extends "main/base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/profile.css" %}">
+<div class="main__container">
+    <header class="header_profile">
+            <div class="profile_photo">
+                <a href="{% url 'create_avatar'%}">
+                <img src="{% static "img/user_icon.png" %}" class="profile_photo def"  alt="user_icon">
+                </a>
+            {%for profile in user_data%}
+
+            <a href="{% url 'update_avatar' profile.id %}">
+                <img src="/media/{{profile.avatar}}/"  class="profile_photo ava" alt="user_icon">
+            </a>
+                
+            {%endfor%}
+            
+        </div>
+        
+        <div class="username">
+            <p>{{user}}</p>   
+        </div>        
+    </header>
+    <h1>Ваши посты:</h1>
+        <div class="blocks_row">
+            {% for item in user_post %}
+               <div class="block">
+                   <div class="image">
+                       
+                       <a href='media/{{item.image}}'>
+                       <img src="media/{{item.image}}" width='500px' alt="">
+                       <a>
+                           
+                   </div>
+                   <div class="descriptions">
+                       <div class="title">
+                           <h3>{{item.title}}</h3>
+                       </div>
+                       <hr>
+                       <div class="subtitle">
+                           <p>{{item.text}}</p>
+                       </div>
+                   </div>
+                   <hr>
+                   <div class="from">
+                       <p>from:{{item.userid}}</p>
+                   </div>
+                   <div class="communication">
+                       <div class="phone_and_mess">
+                           <div class="mess">
+                               <a href="{% url 'chatbox' chat_box_name=user %}">
+                                   <img src="{% static "image/messenger.png" %}" width="30px" height="30px" alt="">
+                               </a>
+                           </div>
+                       </div>
+                   </div>    
+               </div>
+             {% endfor %}
+           </div>
+           </div>
+
+</div>
+<script>
+default_avatar = document.querySelector('.def')
+s = document.querySelectorAll('.ava')
+if (document.querySelector('.ava')){
+    default_avatar.style.display = 'none'
+
+}
+</script>
+{% endblock  %}

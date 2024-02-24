@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'main',
     'channels',
     'widget_tweaks',
+    'user_profile',
 ]
 MEDIA_URL = '/media/'
 

@@ -2,7 +2,7 @@
 *{
 	padding: 0;
 	margin: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto';
 }
 a{
 	text-decoration: none;
@@ -17,31 +17,40 @@ li{
 	background:#602319;	
 }
 
+
 .wrapper>.header>.header__conteiner{
 	max-width:1180px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
  	align-items: center;
+	padding: 5px 0 5px 0;
 }
 .wrapper>.header>.header__conteiner>.logo_name{
 	display: flex;
 	align-items: center;
   	justify-content: center;
 }
+
 .wrapper>.header>.header__conteiner>.logo_name>.name>a{
 	color: #fff;
 	font-size: 15px;
 	text-decoration: none;
 }
 
-.wrapper>.header>.header__conteiner>.logo_name>.name>a>h1>.logo{
-	font-size: 60px;
+.wrapper>.header>.header__conteiner>.logo_name>.name>a>h1{
+	color: #fff;
+	font-family: Roboto;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 42px;
+	padding: 10px;
 }
+
 
 .nav_links>ul{
 	display: flex;
-	margin-top: 20px;
+	margin-top: 20px
 }
 .nav_links>ul>li{
 	margin-left: 61px;
@@ -66,14 +75,9 @@ li{
 	text-transform: uppercase;
 	
 }
-
-
-
-
 h2 {
     text-align: center;
 }
-
 label {
     display: block;
     margin-top: 10px;
@@ -127,42 +131,37 @@ input[type="submit"]:hover {
 	max-width:1180px;
 	margin: 0 auto;	
 }
-.wrapper>.main>.main__container>.blocks_row>.block{
+.blocks_row>.block{
 	width:500px;
 	margin-top: 10px;
 	border:none;
 	border-radius: 10px;
 	background:#fff;
 }
-.wrapper>.main>.main__container>.blocks_row{
+.blocks_row{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
 }
-.wrapper>.main>.main__container>.blocks_row>.block>.image>a>img{
+.blocks_row>.block>.image>a>img{
 	border-radius: 8px;
 }
 
-.wrapper>.main>.main__container>.blocks_row>.block>.communication>.phone_and_mess{
+.blocks_row>.block>.communication>.phone_and_mess{
 	display: flex;
   	justify-content: flex-end;
   	margin-right: 10px;
 
 }
 
-.wrapper>.main>.main__container>.blocks_row>.block>a>.descriptions>.title{
+.blocks_row>.block>a>.descriptions>.title{
 	text-align: center;
-
 }
-
-.wrapper>.main>.main__container>.blocks_row>.block>a>.descriptions>.subtitle{
+.blocks_row>.block>a>.descriptions>.subtitle{
 	text-align: center;
-
 }
-
-
-.wrapper>.main>.main__container>.blocks_row>.block>.communication>.phone_and_mess>.mess{
+.blocks_row>.block>.communication>.phone_and_mess>.mess{
 	margin-left: 20px;
 }
 
@@ -221,6 +220,7 @@ input[type="submit"]:hover {
 }
 .nav_links>ul{
 	font-size: 10px;
+	margin-bottom: 10px;
 }
 
 }
