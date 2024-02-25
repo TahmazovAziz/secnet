@@ -1,9 +1,17 @@
 {% extends "main/base.html" %}
 {% block content %}
-
+{% load widget_tweaks %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/profile.css" %}">
 <form method="post" enctype="multipart/form-data">
-    {{form}}
-    {%csrf_token%}
-    <button type="submit">Send</button>
+    <div class="input__wrapper">
+        {%render_field form.avatar id="input__file"|add_class:"input input__file"%}
+        <label for="input__file" class="input__file-button">
+           <span class="input__file-icon-wrapper"><img class="input__file-icon" src="{%static 'img/icons-upload.png'%}" alt="Выбрать файл" width="25"></span>
+           <span class="input__file-button-text">Выберите файл</span>
+        </label>
+     </div>
+     {%csrf_token%}
+     <button type="submit" class="submit_btn">Send</button>
 </form>
 {% endblock  %}

@@ -10,13 +10,94 @@
 	width: 100px;
 	height: 100px;
 }
-.username>p{
+.username{
 	margin-left: 20px;
 	font-family: Roboto;
 	font-size: 36px;
 	font-weight: 400;
 	line-height: 42px;
 }
+a{
+	color: #000;
+}
 .profile_photo{
     border-radius: 100px;
 }
+
+.input__wrapper {
+	width: 100%;
+	position: relative;
+	margin: 15px 0;
+	text-align: center;
+  }
+   
+  #input__file {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+  }
+   
+  .input__file-icon-wrapper {
+	height: 60px;
+	width: 60px;
+	margin-right: 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	border-right: 1px solid #fff;
+  }
+   
+  .input__file-button-text {
+	line-height: 1;
+	margin-top: 1px;
+  }
+   
+  .input__file-button {
+	width: 100%;
+	max-width: 290px;
+	height: 60px;
+	background: #1bbc9b;
+	color: #fff;
+	font-size: 1.125rem;
+	font-weight: 700;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	-webkit-box-pack: start;
+		-ms-flex-pack: start;
+			justify-content: flex-start;
+	border-radius: 3px;
+	cursor: pointer;
+	margin: 0 auto;
+  }
+  .submit_btn{
+	width: 100px;
+	height: 50px;
+	background: #b9b0b0;
+	border: none;
+	border-radius: 10px;
+	margin: 0 auto;
+	transition: 1s;
+  }
+  .submit_btn:hover{
+	-webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 12px 24px rgba(0,0,0,0.18); 
+	box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 12px 24px rgba(0,0,0,0.18);
+	transition: 1s;
+	background:#000;
+	color: #fff;
+	cursor: pointer;
+  }
+  form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }

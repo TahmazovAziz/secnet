@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+{%block content%}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/users.css" %}">
+{% load widget_tweaks %}
+
+<div class="login-form">
+
+  <form method="post">
+    {{form}}
+    {% csrf_token %}
+  </form>
+
+</div>
+{%endblock%}

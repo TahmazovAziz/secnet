@@ -8,7 +8,7 @@
                 <a href="{% url 'create_avatar'%}">
                 <img src="{% static "img/user_icon.png" %}" class="profile_photo def"  alt="user_icon">
                 </a>
-            {%for profile in user_data%}
+            {%for profile in user_avatar%}
 
             <a href="{% url 'update_avatar' profile.id %}">
                 <img src="/media/{{profile.avatar}}/"  class="profile_photo ava" alt="user_icon">
@@ -17,10 +17,11 @@
             {%endfor%}
             
         </div>
-        
+        {%for name in user_name%}
         <div class="username">
-            <p>{{user}}</p>   
+            <p><a href="{%url 'update_username' name.id%}">{{user}}</a></p>   
         </div>        
+        {%endfor%}
     </header>
     <h1>Ваши посты:</h1>
         <div class="blocks_row">

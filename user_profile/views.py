@@ -3,11 +3,18 @@ from user_profile.models import User_profile
 from user_profile.forms import User_profileForm
 from django.views.generic.edit import UpdateView
 from post.models import Post
+from users.models import Users
 
 def profile_view(request):
-    user_data = User_profile.objects.all()
+    user_avatar = User_profile.objects.all()
     user_post = Post.objects.filter(userid=request.user)
-    return render(request,'profile.html',{'user_data':user_data,'user_post':user_post})
+    user_name = Users.objects.filter(username=request.user)
+    context = {
+        "user_avatar":user_avatar,
+        "user_post":user_post,
+        "user_name":user_name
+    }
+    return render(request,'profile.html',context)
 
 def create_avatar(request):
 
