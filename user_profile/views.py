@@ -4,6 +4,8 @@ from user_profile.forms import User_profileForm
 from django.views.generic.edit import UpdateView
 from post.models import Post
 from users.models import Users
+from user_profile.serializers import User_profile_serializers
+from rest_framework import viewsets
 
 def profile_view(request):
     user_avatar = User_profile.objects.all()
@@ -32,3 +34,6 @@ class User_profileUpdate(UpdateView):
     template_name = 'change_avatar.html'
     form_class = User_profileForm
 
+class User_profileVewSet(viewsets.ModelViewSet):
+    queryset = User_profile.objects.all()
+    serializer_class = User_profile_serializers

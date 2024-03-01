@@ -1,3 +1,6 @@
 from django.test import TestCase
 
-# Create your tests here.
+class MainTest(TestCase):
+    def test_view(self):
+        res = self.client.get('')
+        self.assertEqual(res.status_code,200)

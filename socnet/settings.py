@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'channels',
     'widget_tweaks',
     'user_profile',
+    'rest_framework',
 ]
 MEDIA_URL = '/media/'
 
