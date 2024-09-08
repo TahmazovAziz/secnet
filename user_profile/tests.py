@@ -28,7 +28,7 @@ class TestUserProfile(TestCase):
         res=self.client.post(f'/users/update_username/{user_get.id}/')
         self.assertEqual(res.status_code,200)
 
-class  TestUserApi(APITestCase,APIClient):
+class TestUserApi(APITestCase,APIClient):
     def test_view_api_profile(self):
         res = self.client.get('/profile/api/profile/')
         self.assertEqual(res.status_code,status.HTTP_200_OK)
